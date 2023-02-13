@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: Outfit;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d192b;
+}
+.card{
+  background-color:#14253d ;
+  box-shadow: 0px 15px 5px 10px #0c1729;;
+  margin-bottom:30px ;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:340px;
+}
+.card .img{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.card .view{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: opacity 1.5s;
+  opacity: 0;
+}
+.card .img::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #00fff880;
+  border-radius: 10px;
+  transition: .4s;
+}
+.card .img:hover::before{
+  width: 100%;
+  height: 100%;
+}
+.card .img:hover .view{
+  opacity:1;
+}
+.card .equilibrium{
+  width: 100%;
+  border-radius: 10px;
+}
+.card h2{
+  margin: 10px 0;
+  font-size: 20px;
+  color: white;
+  transition: .4s;
+  
+}
+.card p{
+  color: #8bacda;
+  font-size: 18px;
+}
+.card .holder{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid #2f415b; 
+  padding: 10px 0;
+}
+.card .holder .ethereum,
+.card .holder .clock{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .holder .ethereum span{
+  color: #00FFF8;
+  margin-left:  5px;
+}
+.card .holder .clock span{
+  color: #8BACD9;
+  font-size: 16px;
+  margin-left:  5px;
+}
+.creation {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.creation img{
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.creation p{
+  margin-left: 20px;
+}
+.creation p a{
+  color: #8bacda;
+  text-decoration: none;
+  transition: .4s;
+}
+
+.card h2:hover,
+.creation p a:hover{
+  color: #00FFF8;
+}
